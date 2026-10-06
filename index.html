@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loot Deals — Live Amazon Deals, Price Drops & Alerts</title>
+  <meta name="description" content="Discover Amazon Great Indian Festival 2026 loot deals, price drops, coupons and limited-time offers. Sale starts October 8, with Prime member early access expected from October 7. Check live Amazon prices before buying.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://images.amazon.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261006-08">
+</head>
+<body>
+
+<!-- Visitor entry popup: intentionally visible by default so it still works even if deal JS fails. -->
+<div id="visitorPopup" class="visitor-popup" aria-hidden="false">
+  <div class="popup-backdrop" data-close-popup></div>
+  <section class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <button type="button" class="popup-close" id="popupClose" aria-label="Close popup"><i class="bi bi-x-lg"></i></button>
+    <div class="popup-kicker"><span class="live-dot"></span> LIVE DEAL ALERTS</div>
+    <div class="popup-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+    <h2 id="popupTitle">Amazon ki loot deals miss mat karo!</h2>
+    <p>Humne aapke liye interesting Amazon offers, price drops aur limited-time deals ek jagah collect kiye hain. <strong>Achha deal dikhe to zyada wait mat karo</strong> — price, coupon ya stock kabhi bhi change ho sakta hai. Isleye phele BUY Toh karlo baadme <strong>CANCEL</strong> bhi kar sakte hoo agar nahi chahiye toh...</p>
+    <div class="popup-warning"><i class="bi bi-exclamation-triangle-fill"></i><span>Live Amazon page par final price aur availability zaroor check karein.</span></div>
+    <div class="popup-actions">
+      <a id="popupTelegram" class="popup-social telegram" href="https://t.me/TheGreatIndiandeal" target="_blank" rel="noopener"><i class="bi bi-telegram"></i><span><b>Telegram Join Karo</b><small>LIVE! loot deals & instant alerts</small></span></a>
+      <a id="popupWhatsapp" class="popup-social whatsapp" href="https://whatsapp.com/channel/0029Vb8K1cO7IUYe1kmGfq1y"><i class="bi bi-whatsapp"></i><span><b>WhatsApp Group Join Karo</b><small>Quick deal alerts on WhatsApp</small></span></a>
+    </div>
+    <button type="button" class="popup-skip" id="popupSkip">Pehle deals dekhta hoon <i class="bi bi-arrow-right"></i></button>
+    <div class="popup-note"><i class="bi bi-info-circle"></i> Offers and prices can change without notice.</div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const p = document.getElementById('visitorPopup');
+  const close = () => { p.classList.add('is-closed'); p.setAttribute('aria-hidden','true'); document.body.classList.remove('popup-open'); };
+  const open = () => { p.classList.remove('is-closed'); p.setAttribute('aria-hidden','false'); document.body.classList.add('popup-open'); };
+  document.body.classList.add('popup-open');
+  document.getElementById('popupClose')?.addEventListener('click', close);
+  document.getElementById('popupSkip')?.addEventListener('click', close);
+  p.addEventListener('click', (e) => { if (e.target === p || e.target.closest('[data-close-popup]')) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  document.getElementById('popupTelegram')?.addEventListener('click', () => setTimeout(close, 50));
+  document.getElementById('popupWhatsapp')?.addEventListener('click', () => setTimeout(close, 50));
+  window.lootOpenPopup = open;
+})();
+</script>
+
+<div class="announcement">
+  <div class="container-xl announcement-inner">
+    <span><i class="bi bi-lightning-charge-fill"></i> <strong>LIVE  Amazon offers</strong> — prices, coupons & stock can change quickly.</span>
+    <span class="announcement-right">Always verify the live Amazon price before checkout.</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container-xl header-inner">
+    <a class="brand" href="#top" aria-label="Loot Deals home">
+      <span class="brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+      <span><b>LOOT DEALS</b><small>Amazon offers worth checking</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#deals">Deals</a>
+      <a href="#alerts">Deal Alerts</a>
+      <a href="#why">Why Loot Deals</a>
+    </nav>
+
+    <div class="header-actions">
+      <a id="telegramNav" class="header-social telegram" href="https://t.me/TheGreatIndiandeal" target="_blank" rel="noopener"><i class="bi bi-telegram"></i><span>Telegram</span></a>
+      <a id="whatsappNav" class="header-social whatsapp" href="https://whatsapp.com/channel/0029Vb8K1cO7IUYe1kmGfq1y"><i class="bi bi-whatsapp"></i><span>WhatsApp</span></a>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch to dark theme"><i class="bi bi-moon-stars-fill"></i></button>
+      <a class="header-cta" href="#deals"><i class="bi bi-fire"></i> Browse Deals</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="container-xl">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> LIVE DEALS · LESS SEARCHING</span>
+        <h1>Amazon Great Festival deals.<br><em>Less searching. start on 8 Oct</em></h1>
+        <p>Humne apki leye Amazon par interesting HIDDEN loot deals, discounts aur price drops Deals <b>(JUST REVEALED)</b> keye hai jo sirf ISS BAR ke <b>Amazon Great Indian Festival Sale</b> k leye hai, isko hamne ek clean feed mein collect kiya hai. Deal pasand aaye to <b>Turant BUY karle</b> aur live Amazon price check karke jaldi decide karo.</p>
+        <div class="hero-actions">
+          <a href="#deals" class="primary-btn"><i class="bi bi-lightning-charge-fill"></i> Explore Loot Deals</a>
+          <a id="telegramHero" class="hero-social telegram" href="https://t.me/TheGreatIndiandeal" target="_blank" rel="noopener"><i class="bi bi-telegram"></i> Join Telegram</a>
+          <a id="whatsappHero" class="hero-social whatsapp" href="https://whatsapp.com/channel/0029Vb8K1cO7IUYe1kmGfq1y"><i class="bi bi-whatsapp"></i> Join WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <span><i class="bi bi-arrow-repeat"></i><b id="totalDeals">5,471+</b> random deals</span>
+          <span><i class="bi bi-shield-check"></i> Amazon is final source</span>
+          <span><i class="bi bi-clock-history"></i> Fast-moving offers</span>
+        </div>
+      </div>
+      <aside class="urgency-card">
+        <div class="urgency-kicker"><i class="bi bi-exclamation-circle-fill"></i> DON'T WAIT TOO LONG</div>
+        <h2>Deals ya Offer achha mela hai? <strong>Price change ho sakta hai.</strong></h2>
+        <p>Price, coupon, seller aur stock kabhi bhi change ho sakta hai. Same discount/offer baad mein milega nahi, abhi uss <b>Deal ko GRAB kare...</b></p>
+        <div class="urgency-list">
+          <span><i class="bi bi-check2-circle"></i> Coupon may disappear</span>
+          <span><i class="bi bi-check2-circle"></i> Stock may move</span>
+          <span><i class="bi bi-check2-circle"></i> Same price may not return</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="deal-section" id="deals">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">TODAY'S CURATED FEED</span>
+          <h2>Amazon Loot Deals</h2>
+          <p>Like a deal? then Just GRAB it before the offer changes, Amazon has thousands of products, offers and temporary discounts. We bring those interesting deals together in one place so you don't have to search through the entire Amazon website.</p>
+        </div>
+        <div class="deal-total"><b id="count">Loading deals…</b></div>
+      </div>
+
+      <div class="filter-bar">
+        <label class="search-control"><i class="bi bi-search"></i><input id="search" type="search" placeholder="Search product, brand, ASIN or category…" autocomplete="off"></label>
+        <select id="category" class="form-select"><option value="">All categories</option></select>
+        <button id="loadAll" class="load-btn" type="button"><i class="bi bi-grid-3x3-gap"></i> Load all</button>
+      </div>
+
+      <div id="grid" class="product-grid" aria-live="polite"></div>
+      <div id="sentinel" class="sentinel">Finding Live deals…</div>
+    </section>
+
+    <section class="price-alert">
+      <div class="price-alert-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+      <div>
+        <span>IMPORTANT PRICE NOTE</span>
+        <h3>The price shown here is a snapshot. Amazon is the live source.</h3>
+        <p>prices, coupons, stock, sellers and delivery information can change very quickly. It is difficult to keep every displayed price perfectly synchronized in real time. Always open the Amazon product page and check the final price before paying.</p>
+      </div>
+    </section>
+
+    <section
+  id="alerts"
+  class="community-section"
+>
+
+  <div class="community-card">
+
+    <div class="row g-4 align-items-center">
+
+
+      <div class="col-lg-7">
+
+        <div class="section-kicker">
+          DON'T MISS THE NEXT LOOT DEAL
+        </div>
+
+
+        <h2>
+          See a good deal?
+          Don't wait too long.
+        </h2>
+
+
+        <p>
+
+          Sometimes Amazon offers are available only for a
+          limited time, while stock or coupon availability
+          can change quickly.
+
+          <br><br>
+
+          If the live Amazon page still shows the price and
+          offer you want, you can place your order while it
+          is available.
+
+          <strong>
+            The same discount may not be available again.
+          </strong>
+
+          If you change your mind after ordering, cancellation
+          depends on the cancellation option and status shown
+          by Amazon for that order.
+
+        </p>
+
+
+        <div class="urgency-points">
+
+          <span class="urgency-point">
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            Offer may change
+
+          </span>
+
+
+          <span class="urgency-point">
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            Coupon may disappear
+
+          </span>
+
+
+          <span class="urgency-point">
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            Stock may move
+
+          </span>
+
+
+          <span class="urgency-point">
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            Same price may not return
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-5">
+
+        <div class="community-buttons">
+
+
+          <!-- TELEGRAM -->
+
+          <a
+            id="ctaTelegram"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="community-button telegram"
+          >
+
+            <i class="bi bi-telegram"></i>
+
+            <span>
+
+              <strong>
+                Join Telegram Channel
+              </strong>
+
+              <small>
+                Live! loot deals & instant alerts
+              </small>
+
+            </span>
+
+          </a>
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            id="ctaWhatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="community-button whatsapp"
+          >
+
+            <i class="bi bi-whatsapp"></i>
+
+            <span>
+
+              <strong>
+                Join WhatsApp Group
+              </strong>
+
+              <small>
+                Deal alerts directly on WhatsApp
+              </small>
+
+            </span>
+
+          </a>
+
+
+          <a
+            href="#deals"
+            class="community-button"
+            style="
+              background:#101828;
+              box-shadow:none;
+            "
+          >
+
+            <i class="bi bi-fire"></i>
+
+            <span>
+
+              <strong>
+                Browse All Deals
+              </strong>
+
+              <small>
+                Check today's current offers
+              </small>
+
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     WHY LOOT DEALS — COMPACT
+======================================================= -->
+<section id="why" class="section why-after-deals">
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">WHY LOOT DEALS</div>
+      <h2 class="section-title">Less searching. More deal spotting.</h2>
+    </div>
+  </div>
+  <div class="why-grid why-grid-compact">
+    <article class="why-card"><div class="why-icon icon-orange"><i class="bi bi-binoculars-fill"></i></div><h3>We do the hunting</h3><p>Interesting Amazon offers, discounts and price drops in one feed so you spend less time searching.</p></article>
+    <article class="why-card"><div class="why-icon icon-blue"><i class="bi bi-activity"></i></div><h3>Fast-changing offers</h3><p>Prices, coupons, sellers and stock can change without notice. Great deals can disappear.</p></article>
+    <article class="why-card"><div class="why-icon icon-green"><i class="bi bi-bell-fill"></i></div><h3>Catch the next deal</h3><p>Join Telegram or WhatsApp for faster deal alerts to hear about UPCOMING New Loot Deals sooner.</p></article>
+    <article class="why-card"><div class="why-icon icon-purple"><i class="bi bi-shield-check"></i></div><h3>Amazon is final</h3><p>Always verify the live price and availability before checkout.</p></article>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container-xl footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-head">
+        <span class="footer-brand-mark"><i class="bi bi-bag-check-fill"></i></span>
+        <div>
+          <strong>LOOT DEALS</strong>
+          <span>Smart deal discovery</span>
+        </div>
+      </div>
+      <p>Curated Amazon offers, loot deals and price drops — presented in one simple feed.</p>
+      <div class="footer-trust"><span><i class="bi bi-lightning-charge-fill"></i> Live deals</span><span><i class="bi bi-shield-check"></i> Verify on Amazon</span></div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">QUICK LINKS</div>
+      <div class="footer-links">
+        <a href="#top"><i class="bi bi-house"></i> Home</a>
+        <a href="#deals"><i class="bi bi-grid-3x3-gap"></i> All Deals</a>
+        <a href="#alerts"><i class="bi bi-bell"></i> Deal Alerts</a>
+        <a href="#why"><i class="bi bi-stars"></i> Why Loot Deals</a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-legal">
+      <div class="footer-title">LEGAL & TRANSPARENCY</div>
+      <div class="footer-links footer-legal-links">
+        <a href="privacy-policy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+        <a href="terms-and-conditions.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a>
+        <a href="affiliate-disclosure.html"><i class="bi bi-cash-coin"></i> Affiliate Disclosure</a>
+        <a href="disclaimer.html"><i class="bi bi-exclamation-circle"></i> Disclaimer</a>
+        <a href="amazon-affiliate-agreement.html"><i class="bi bi-amazon"></i> Amazon Associates Compliance</a>
+        <a href="terms-of-service.html"><i class="bi bi-journal-check"></i> Terms of Service</a>
+        <a href="about-us.html"><i class="bi bi-info-circle"></i> About Us</a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-community">
+      <div class="footer-title">STAY UPDATED</div>
+      <p>Get faster alerts when the next interesting deal goes live.</p>
+      <div class="footer-socials">
+        <a class="footer-social telegram" href="https://t.me/TheGreatIndiandeal" target="_blank" rel="noopener"><i class="bi bi-telegram"></i><span>Telegram</span><i class="bi bi-arrow-up-right"></i></a>
+        <a id="footerWhatsapp" class="footer-social whatsapp" href="https://whatsapp.com/channel/0029Vb8K1cO7IUYe1kmGfq1y"><i class="bi bi-whatsapp"></i><span>WhatsApp</span><i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Loot Deals · <a href="https://thegreatindiandeals.in" target="_blank" rel="noopener">thegreatindiandeals.in</a></span>
+      <span class="affiliate"><i class="bi bi-info-circle"></i> As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links and we may earn a commission at no extra cost to you. Legal/Privacy WhatsApp: <a href="https://wa.me/919999999999" target="_blank" rel="noopener">+919999999999</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+<template id="card-template">
+  <article class="product-card">
+    <div class="discount"></div>
+    <a class="image-box" target="_blank" rel="noopener sponsored"><img loading="lazy" decoding="async" alt=""></a>
+    <div class="card-body">
+      <div class="product-meta"><span>DEAL</span><small><i class="bi bi-circle-fill"></i> LIVE CHECK</small></div>
+      <a class="title" target="_blank" rel="noopener sponsored"></a>
+      <div class="price-row"><div><small>MRP</small> <del class="mrp"></del></div><strong class="deal"></strong></div>
+      <div class="validity"></div>
+      <div class="affiliate-link-note"><i class="bi bi-link-45deg"></i> Paid link · We may earn a commission</div>
+      <a class="buy" target="_blank" rel="noopener sponsored">Check on Amazon <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </article>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="config.js"></script>
+<script src="deal-loader.js"></script>
+<script src="app.js?v=20261006-03"></script>
+</body>
+</html>
