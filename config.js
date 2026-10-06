@@ -1,7 +1,7 @@
 // ============================================================
 // LOOT DEALS — PUBLIC CONFIG thegreatindiandeals/loot-deals
 // ============================================================
-window.GHRL = 'thegreatindiandeals/loot-deals';
+window.GHRL = 'thegreatindiandeals/lootdeals';
 window.GHRLREF = 'main';
 window.AMAZON_AFFILIATE_TAG = 'thegreatin044-21';
 window.LEGAL_CONTACT_WHATSAPP = '+919999999999';
